@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+  </head>
+  <body>
+    <div class="my_name">
+      <h1>Rafiul Ramjan</h1>
+      <h3>Software Developer and Data Scientist </h3>
+    </div>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT ME</a></li>
+        <li><a href="#">TUTORIALS</a></li>
+        <li><a href="#">CODES</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    <h1>Top 15 Python Libraries for Data Science in 2017</h1>
+    <p class="paragraph">As Python has gained a lot of traction in the recent years in Data Science industry, I wanted to outline some of its most useful libraries for data scientists and engineers, based on recent experience.
+And, since all of the libraries are open sourced, we have added commits, contributors count and other metrics from Github, which could be served as a proxy metrics for library popularity.</p>
+    <h2>Code Libraries</h2>
+    <h1>1. NumPy (Commits: 15980, Contributors: 522)</h1>
+    <p class="paragraph">When starting to deal with the scientific task in Python, one inevitably comes for help to Python’s SciPy Stack, which is a collection of software specifically designed for scientific computing in Python (do not confuse with SciPy library, which is part of this stack, and the community around this stack). This way we want to start with a look at it. However, the stack is pretty vast, there is more than a dozen of libraries in it, and we want to put a focal point on the core packages (particularly the most essential ones).
+The most fundamental package, around which the scientific computation stack is built, is NumPy (stands for Numerical Python). It provides an abundance of useful features for operations on n-arrays and matrices in Python. The library provides vectorization of mathematical operations on the NumPy array type, which ameliorates performance and accordingly speeds up the execution.</p>
+    <h1>2. SciPy (Commits: 17213, Contributors: 489)</h1>
+    <p class="paragraph">SciPy is a library of software for engineering and science. Again you need to understand the difference between SciPy Stack and SciPy Library. SciPy contains modules for linear algebra, optimization, integration, and statistics. The main functionality of SciPy library is built upon NumPy, and its arrays thus make substantial use of NumPy. It provides efficient numerical routines as numerical integration, optimization, and many others via its specific submodules. The functions in all submodules of SciPy are well documented — another coin in its pot.</p>
+    {% for foo in myblog %}
+
+     <h1>{{ foo.title }}</h1>
+  <p>{{ foo.body }}</p>
+    {% endfor %}
+  </body>
+</html>
